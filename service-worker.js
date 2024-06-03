@@ -1,13 +1,13 @@
 // Service worker version
 const CACHE_VERSION = 'v1';
 const CACHE_NAME = `app-cache-${CACHE_VERSION}`;
-const APP_SHELL_URL = 'https://crakknayeem.github.io/I_am_updated_bro/';
+const INDEX_FILE_URL = 'index.html';
 
-// Install service worker and cache app shell
+// Install service worker and cache index file
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then(cache => cache.add(APP_SHELL_URL))
+      .then(cache => cache.add(INDEX_FILE_URL))
       .then(() => self.skipWaiting())
   );
 });
@@ -32,9 +32,9 @@ self.addEventListener('activate', event => {
 // Fetch resources from cache or network
 self.addEventListener('fetch', event => {
   event.respondWith(
-    caches.match(APP_SHELL_URL)
+    caches.match(INDEX_FILE_URL)
       .then(response => {
-        return response || fetch(APP_SHELL_URL);
+        return response || fetch(INDEX_FILE_URL);
       })
   );
 });
