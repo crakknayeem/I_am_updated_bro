@@ -62,6 +62,7 @@
             align-items: center;
             padding: 1rem;
             gap: 1rem;
+            position: relative;
         }
 
         article:hover {
@@ -92,6 +93,10 @@
             border-radius: 8px;
             cursor: pointer;
             transition: background-color 0.3s;
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
         }
 
         .open-in-new-tab:hover {
@@ -122,6 +127,8 @@
             .open-in-new-tab {
                 width: 100%;
                 margin-top: 1rem;
+                position: static;
+                transform: none;
             }
         }
     </style>
@@ -190,7 +197,7 @@
         document.querySelectorAll('.open-in-new-tab').forEach(button => {
             button.addEventListener('click', event => {
                 event.stopPropagation();
-                const url = button.parentElement.parentElement.getAttribute('data-url');
+                const url = button.closest('.article-link').getAttribute('data-url');
                 window.open(url, '_blank');
             });
         });
