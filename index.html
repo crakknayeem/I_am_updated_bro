@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Newspaper Reader</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="styles.css">
-    <link rel="manifest" href="manifest.json">
-    
+   
     <style>
         body {
             margin: 0;
@@ -280,18 +278,5 @@
     <footer>
         <p>&copy; 2024 Newspaper Reader. All rights reserved.</p>
     </footer>
-
-    <script>
-
-        if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('../service-worker.js').then((registration) => {
-      console.log('Service Worker registered with scope:', registration.scope);
-    }, (error) => {
-      console.log('Service Worker registration failed:', error);
-    });
-  });
-        }
-    </script></script>
 </body>
 </html>
