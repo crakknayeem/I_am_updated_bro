@@ -83,6 +83,21 @@
             margin: 0;
         }
 
+        .open-in-new-tab {
+            margin-left: auto;
+            padding: 0.5rem 1rem;
+            background-color: #0073e6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .open-in-new-tab:hover {
+            background-color: #005bb5;
+        }
+
         footer {
             text-align: center;
             padding: 1rem 0;
@@ -103,6 +118,11 @@
             .article-link {
                 width: 100%;
             }
+
+            .open-in-new-tab {
+                width: 100%;
+                margin-top: 1rem;
+            }
         }
     </style>
 </head>
@@ -116,36 +136,42 @@
                 <article>
                     <img src="prothomalo.png" alt="New York Times">
                     <h2>New York Times</h2>
+                    <button class="open-in-new-tab">Open in New Tab in Group</button>
                 </article>
             </div>
             <div class="article-link" data-url="https://www.theguardian.com">
                 <article>
                     <img src="ittefaq.png" alt="The Guardian">
                     <h2>The Guardian</h2>
+                    <button class="open-in-new-tab">Open in New Tab in Group</button>
                 </article>
             </div>
             <div class="article-link" data-url="https://www.bbc.com/news">
                 <article>
                     <img src="kalerkontho.png" alt="BBC News">
                     <h2>BBC News</h2>
+                    <button class="open-in-new-tab">Open in New Tab in Group</button>
                 </article>
             </div>
             <div class="article-link" data-url="https://www.washingtonpost.com">
                 <article>
                     <img src="noyadigonto.png" alt="The Washington Post">
                     <h2>The Washington Post</h2>
+                    <button class="open-in-new-tab">Open in New Tab in Group</button>
                 </article>
             </div>
             <div class="article-link" data-url="https://www.washingtonpost.com">
                 <article>
                     <img src="jugantor.png" alt="The Washington Post">
                     <h2>The Washington Post</h2>
+                    <button class="open-in-new-tab">Open in New Tab in Group</button>
                 </article>
             </div>
             <div class="article-link" data-url="https://www.washingtonpost.com">
                 <article>
                     <img src="bangladeshprotidin.png" alt="The Washington Post">
                     <h2>The Washington Post</h2>
+                    <button class="open-in-new-tab">Open in New Tab in Group</button>
                 </article>
             </div>
         </section>
@@ -157,6 +183,14 @@
         document.querySelectorAll('.article-link').forEach(item => {
             item.addEventListener('click', event => {
                 const url = item.getAttribute('data-url');
+                window.location.href = url;
+            });
+        });
+
+        document.querySelectorAll('.open-in-new-tab').forEach(button => {
+            button.addEventListener('click', event => {
+                event.stopPropagation();
+                const url = button.parentElement.parentElement.getAttribute('data-url');
                 window.open(url, '_blank');
             });
         });
