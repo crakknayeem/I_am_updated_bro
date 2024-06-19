@@ -6,112 +6,9 @@
     <title>Newspaper Reader</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
    <link rel="icon" href="logo.ico" type="image/x-icon">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-    
-
-        header {
-            background-color: #0073e6;
-            color: white;
-            padding: 1.5rem 0;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-
-        h1 {
-            margin: 0;
-            font-size: 2rem;
-            font-weight: 700;
-        }
-
-        main {
-            padding: 2rem 1rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        .newspaper-links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1.5rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .article-link {
-            text-decoration: none;
-            width: 280px;
-        }
-        
-
-        article {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            text-align: left;
-            transition: transform 0.3s, box-shadow 0.3s;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            padding: 1rem;
-            gap: 1rem;
-        }
-
-        article:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-        }
-
-        img {
-            width: 100px;
-            height: 100px;
-            object-fit: contain; /* Changed from cover to contain */
-            border-radius: 8px;
-        }
-
-        h2 {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #333;
-            margin: 0;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            background-color: #0073e6;
-            color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .must{
-          box-shadow: 0 5px 10px red;
-        }
-
-        @media (max-width: 768px) {
-            .newspaper-links {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .article-link {
-                width: 100%;
-            }
-        }
-    </style>
+   <head>
+  <link rel="stylesheet" href="styles.css">
+</head>
 </head>
 <body>
     <header>
@@ -120,7 +17,7 @@
     <main>
         <section class="newspaper-links">
             <a href="https://epaper.prothomalo.com/Home/" class="article-link" class="must">
-                <article class="must">
+                <article>
                     <img src="prothomalo.png" alt="New York Times">
                     <h2>প্রথম আলো</h2>
                 </article>
@@ -128,14 +25,14 @@
 
 
             <a href="https://epaper.thedailystar.net/" class="article-link" class="must">
-                <article class="must">
+                <article>
                     <img src="dstar.png" alt="New York Times">
                     <h2>The Daily Star</h2>
                 </article>
             </a>
 
             <a href="https://m.dainikshiksha.com/" class="article-link" class="must">
-                <article class="must">
+                <article>
                     <img src="dshikha.png" alt="New York Times">
                     <h2>দৈনিক শিক্ষা</h2>
                 </article>
@@ -144,7 +41,7 @@
 
             
             <a href="https://epaper.ittefaq.com.bd/" class="article-link">
-                <article class="must">
+                <article>
                     <img src="ittefaq.png" alt="The Guardian">
                     <h2>দৈনিক ইত্তেফাক</h2>
                 </article>
@@ -199,11 +96,12 @@
 
             
             <a href="https://www.facebook.com/share/92JLmJ5F5erF3y3b/?mibextid=A7sQZp" class="article-link">
-                <article class="must">
+                <article>
                     <img src="asg.png" alt="The Washington Post">
-                    <h2>ASG(Apar's student group)</h2>
+                    <h2>ASG (Apar's student group)</h2>
                 </article>
             </a>
+                      
              <a href="https://m.facebook.com/groups/mediaim/members/?_se_imp=0MceXS30W40g7F11V" class="article-link" class="must">
                 <article>
                     <img src="mediaim.png" alt="New York Times">
@@ -213,7 +111,7 @@
             
 
             <a href="https://www.facebook.com/GSTUpdateDaily?mibextid=ZbWKwL" class="article-link">
-                <article class="must">
+                <article>
                     <img src="gud.png" alt="The Washington Post">
                     <h2>Gst Update Daily </h2>
                 </article>
@@ -221,7 +119,7 @@
 
 
             <a href="https://www.facebook.com/unmeshpage?mibextid=ZbWKwL" class="article-link">
-                <article class="must">
+                <article>
                     <img src="unmesh.png" alt="The Washington Post">
                     <h2>Unmesh medical and dental admission</h2>
                 </article>
@@ -237,7 +135,7 @@
             </a>
 
             <a href="https://www.facebook.com/share/hbYrCbYthgWz6Evi/?mibextid=A7sQZp" class="article-link" class="must">
-                <article class="must">
+                <article>
                     <img src="ebarta.png" alt="The Washington Post">
                     <h2>শিক্ষা বার্তা</h2>
                 </article>
@@ -294,7 +192,7 @@
             
 
             <a href="https://epaper.amaderbarta.net/" class="article-link">
-                <article class="must">
+                <article>
                     <img src="abarta.png" alt="The Washington Post">
                     <h2>আমাদের বার্তা</h2>
                 </article>
@@ -307,38 +205,38 @@
 
 
             <a href="https://www.facebook.com/groups/medicalwallah/?ref=share&mibextid=NoJtEM" class="article-link">
-                <article class="must">
+                <article>
                     <img src="medicalwallah.png" alt="The Washington Post">
                     <h2>MedicalWallah(মেডিকেলওয়ালা)</h2>
                 </article>
             </a>
 
             <a href="https://www.facebook.com/groups/retinaofficial/?ref=share&mibextid=NoJtEM" class="article-link">
-                <article class="must">
+                <article>
                     <img src="retinagroup.png" alt="The Washington Post">
                     <h2>Retina group</h2>
                 </article>
             </a>
             <a href="https://www.facebook.com/share/nDBQYmgLBvbrox6A/?mibextid=qi2Omg" class="article-link">
-                <article class="must">
+                <article>
                     <img src="arifazad.png" alt="The Washington Post">
                     <h2>আরিফ আজাদ </h2>
                 </article>
             </a>
             <a href="https://www.facebook.com/share/UCNopgw7zNHhcaxB/?mibextid=qi2Omg" class="article-link">
-                <article class="must">
+                <article>
                     <img src="sabasvai.png" alt="The Washington Post">
                     <h2>সারোয়ার জাহান শাওন </h2>
                 </article>
             </a>
             <a href="https://www.facebook.com/share/zPHSyk8jT6nWWHPB/?mibextid=qi2Omg" class="article-link">
-                <article class="must">
+                <article>
                     <img src="rahatvai.png" alt="The Washington Post">
                     <h2>Md. Naimul Islam Rahat </h2>
                 </article>
             </a>
             <a href="https://www.facebook.com/share/bdkGWX6YwFVudptG/?mibextid=qi2Omg" class="article-link">
-                <article class="must">
+                <article>
                     <img src="sadabvai.png" alt="The Washington Post">
                     <h2>Sadiqur Rahman Sadab</h2>
                 </article>
